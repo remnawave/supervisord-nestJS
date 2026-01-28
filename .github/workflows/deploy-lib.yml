@@ -41,11 +41,11 @@ jobs:
         run: npm install -g npm@latest
 
       - name: Install dependencies and build
-        working-directory: 'libs/contract'
+        working-directory: './'
         run: npm i && npm run prepublish
 
       - name: Publish package on NPM
-        working-directory: 'libs/contract'
+        working-directory: './'
         run: npm publish
 
   send-finish-tg-msg:
