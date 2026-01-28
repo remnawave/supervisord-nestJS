@@ -4,6 +4,6 @@ interface ISupervisordConfigOptions {
 }
 
 export interface ISupervisordModuleOptions {
-    host: string;
+    connectionUrl: string;
     options?: ISupervisordConfigOptions;
 }

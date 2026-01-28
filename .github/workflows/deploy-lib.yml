@@ -26,25 +26,27 @@ jobs:
     permissions:
       contents: read
       id-token: write
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Update npm
+        run: npm install -g npm@latest
+
       - name: Install dependencies and build
-        working-directory: './'
+        working-directory: 'libs/contract'
         run: npm i && npm run prepublish
 
       - name: Publish package on NPM
-        working-directory: './'
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: 'libs/contract'
+        run: npm publish
 
   send-finish-tg-msg:
     name: Send TG message

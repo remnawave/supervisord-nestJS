@@ -1,6 +1,6 @@
 {
   "name": "@remnawave/supervisord-nestjs",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "license": "AGPL-3.0-only",
@@ -18,11 +18,11 @@
     "url": "https://github.com/remnawave/supervisord-nestjs/issues"
   },
   "dependencies": {
-    "@nestjs/common": "^11.0.12",
-    "@nestjs/core": "^11.0.12"
+    "@nestjs/common": "^11.1.12",
+    "@nestjs/core": "^11.1.12"
   },
   "peerDependencies": {
-    "node-supervisord": ">=1.0.6-rc.2"
+    "@kastov/node-supervisord": ">=2"
   },
   "author": "Remnawave",
   "keywords": [],

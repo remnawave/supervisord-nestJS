@@ -9,7 +9,7 @@ import {
 } from './supervisord-nestjs.builder';
 import { ModuleRef } from '@nestjs/core';
 import { ISupervisordModuleOptions } from './interfaces';
-import { SupervisordClient } from 'node-supervisord';
+import { SupervisordClient } from '@kastov/node-supervisord';
 
 @Global()
 @Module({})
